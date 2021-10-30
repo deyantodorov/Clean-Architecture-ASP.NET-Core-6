@@ -38,6 +38,8 @@
     <None Remove="Features\LeaveRequests\Handlers\Queries\" />
     <None Remove="Features\LeaveRequests\Requests\Commands\" />
     <None Remove="Features\LeaveRequests\Requests\Queries\" />
+    <None Remove="DTOs\LeaveAllocation\" />
+    <None Remove="DTOs\LeaveType\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Persistance\" />
@@ -68,6 +70,8 @@
     <Folder Include="Features\LeaveRequests\Handlers\Queries\" />
     <Folder Include="Features\LeaveRequests\Requests\Commands\" />
     <Folder Include="Features\LeaveRequests\Requests\Queries\" />
+    <Folder Include="DTOs\LeaveAllocation\" />
+    <Folder Include="DTOs\LeaveType\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />

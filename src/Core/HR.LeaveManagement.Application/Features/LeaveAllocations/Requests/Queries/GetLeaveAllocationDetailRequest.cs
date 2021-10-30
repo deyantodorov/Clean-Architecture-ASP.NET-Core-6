@@ -1,4 +1,4 @@
-﻿using HR.LeaveManagement.Application.DTOs;
+﻿using HR.LeaveManagement.Application.DTOs.LeaveAllocation;
 
 using MediatR;
 
