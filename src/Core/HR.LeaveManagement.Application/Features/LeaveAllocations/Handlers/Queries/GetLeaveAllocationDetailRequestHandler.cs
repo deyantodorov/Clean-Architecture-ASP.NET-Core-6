@@ -22,9 +22,10 @@ namespace HR.LeaveManagement.Application.Features.LeaveAllocations.Handlers.Quer
             this.mapper = mapper;
         }
 
-        public Task<LeaveAllocationDto> Handle(GetLeaveAllocationDetailRequest request, CancellationToken cancellationToken)
+        public async Task<LeaveAllocationDto> Handle(GetLeaveAllocationDetailRequest request, CancellationToken cancellationToken)
         {
-            throw new System.NotImplementedException();
+            var leaveAllocation = await this.leaveAllocationRepository.GetLeaveAllocationWithDetails(request.Id);
+            return this.mapper.Map<LeaveAllocationDto>(leaveAllocation);
         }
     }
 }
