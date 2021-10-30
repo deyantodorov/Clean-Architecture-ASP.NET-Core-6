@@ -1,0 +1,76 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HR.LeaveManagement.Domain\HR.LeaveManagement.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Persistance\" />
+    <None Remove="Profiles\" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="DTOs\" />
+    <None Remove="DTOs\Common\" />
+    <None Remove="DTOs\LeaveRequest\" />
+    <None Remove="Persistance\Contracts\" />
+    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Features\" />
+    <None Remove="Features\LeaveType\" />
+    <None Remove="Features\LeaveRequest\" />
+    <None Remove="Features\LeaveAllocation\" />
+    <None Remove="Features\LeaveTypes\Requests\" />
+    <None Remove="Features\LeaveTypes\Handlers\" />
+    <None Remove="Features\LeaveTypes\Handlers\Commands\" />
+    <None Remove="Features\LeaveTypes\Handlers\Queries\" />
+    <None Remove="Features\LeaveTypes\Requests\Commands\" />
+    <None Remove="Features\LeaveTypes\Requests\Queries\" />
+    <None Remove="Features\LeaveAllocations\Handlers\" />
+    <None Remove="Features\LeaveAllocations\Requests\" />
+    <None Remove="Features\LeaveRequests\Handlers\" />
+    <None Remove="Features\LeaveRequests\Requests\" />
+    <None Remove="Features\LeaveAllocations\Handlers\Commands\" />
+    <None Remove="Features\LeaveAllocations\Handlers\Queries\" />
+    <None Remove="Features\LeaveAllocations\Requests\Commands\" />
+    <None Remove="Features\LeaveAllocations\Requests\Queries\" />
+    <None Remove="Features\LeaveRequests\Handlers\Commands\" />
+    <None Remove="Features\LeaveRequests\Handlers\Queries\" />
+    <None Remove="Features\LeaveRequests\Requests\Commands\" />
+    <None Remove="Features\LeaveRequests\Requests\Queries\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Persistance\" />
+    <Folder Include="Profiles\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="DTOs\Common\" />
+    <Folder Include="DTOs\LeaveRequest\" />
+    <Folder Include="Persistance\Contracts\" />
+    <Folder Include="Features\" />
+    <Folder Include="Features\LeaveTypes\" />
+    <Folder Include="Features\LeaveRequests\" />
+    <Folder Include="Features\LeaveAllocations\" />
+    <Folder Include="Features\LeaveTypes\Requests\" />
+    <Folder Include="Features\LeaveTypes\Handlers\" />
+    <Folder Include="Features\LeaveTypes\Handlers\Commands\" />
+    <Folder Include="Features\LeaveTypes\Handlers\Queries\" />
+    <Folder Include="Features\LeaveTypes\Requests\Commands\" />
+    <Folder Include="Features\LeaveTypes\Requests\Queries\" />
+    <Folder Include="Features\LeaveAllocations\Handlers\" />
+    <Folder Include="Features\LeaveAllocations\Requests\" />
+    <Folder Include="Features\LeaveRequests\Handlers\" />
+    <Folder Include="Features\LeaveRequests\Requests\" />
+    <Folder Include="Features\LeaveAllocations\Handlers\Commands\" />
+    <Folder Include="Features\LeaveAllocations\Handlers\Queries\" />
+    <Folder Include="Features\LeaveAllocations\Requests\Commands\" />
+    <Folder Include="Features\LeaveAllocations\Requests\Queries\" />
+    <Folder Include="Features\LeaveRequests\Handlers\Commands\" />
+    <Folder Include="Features\LeaveRequests\Handlers\Queries\" />
+    <Folder Include="Features\LeaveRequests\Requests\Commands\" />
+    <Folder Include="Features\LeaveRequests\Requests\Queries\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+  </ItemGroup>
+</Project>
