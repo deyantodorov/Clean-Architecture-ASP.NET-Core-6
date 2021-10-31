@@ -40,6 +40,10 @@
     <None Remove="Features\LeaveRequests\Requests\Queries\" />
     <None Remove="DTOs\LeaveAllocation\" />
     <None Remove="DTOs\LeaveType\" />
+    <None Remove="FluentValidation.DependencyInjectionExtensions" />
+    <None Remove="DTOs\LeaveType\Validators\" />
+    <None Remove="DTOs\LeaveRequest\Validators\" />
+    <None Remove="DTOs\LeaveAllocation\Validators\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Persistance\" />
@@ -72,9 +76,13 @@
     <Folder Include="Features\LeaveRequests\Requests\Queries\" />
     <Folder Include="DTOs\LeaveAllocation\" />
     <Folder Include="DTOs\LeaveType\" />
+    <Folder Include="DTOs\LeaveType\Validators\" />
+    <Folder Include="DTOs\LeaveRequest\Validators\" />
+    <Folder Include="DTOs\LeaveAllocation\Validators\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.4" />
   </ItemGroup>
 </Project>

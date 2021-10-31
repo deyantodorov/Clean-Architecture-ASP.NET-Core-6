@@ -9,6 +9,8 @@ namespace HR.LeaveManagement.Application.Persistance.Contracts
 
         public Task<IReadOnlyList<T>> GetAll();
 
+        Task<bool> Exists(int id);
+
         public Task<T> Add(T entity);
 
         public Task<T> Update(T entity);
