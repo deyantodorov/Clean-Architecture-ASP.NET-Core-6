@@ -44,6 +44,8 @@
     <None Remove="DTOs\LeaveType\Validators\" />
     <None Remove="DTOs\LeaveRequest\Validators\" />
     <None Remove="DTOs\LeaveAllocation\Validators\" />
+    <None Remove="Exceptions\" />
+    <None Remove="Responses\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Persistance\" />
@@ -79,6 +81,8 @@
     <Folder Include="DTOs\LeaveType\Validators\" />
     <Folder Include="DTOs\LeaveRequest\Validators\" />
     <Folder Include="DTOs\LeaveAllocation\Validators\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Responses\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
