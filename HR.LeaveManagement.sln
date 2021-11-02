@@ -26,6 +26,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Infrastructure", "src\Infrastructure\HR.LeaveManagement.Infrastructure\HR.LeaveManagement.Infrastructure.csproj", "{07CA7F10-49B0-410C-BE7E-CED17F276DCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Persistance", "src\Infrastructure\HR.LeaveManagement.Persistance\HR.LeaveManagement.Persistance.csproj", "{D108856C-D619-417C-A6BD-81206DE09D60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +44,14 @@ Global
 		{354BC29B-B4C1-43A1-A2E4-DF67ACB06E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{354BC29B-B4C1-43A1-A2E4-DF67ACB06E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{354BC29B-B4C1-43A1-A2E4-DF67ACB06E8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07CA7F10-49B0-410C-BE7E-CED17F276DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07CA7F10-49B0-410C-BE7E-CED17F276DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07CA7F10-49B0-410C-BE7E-CED17F276DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07CA7F10-49B0-410C-BE7E-CED17F276DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D108856C-D619-417C-A6BD-81206DE09D60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D108856C-D619-417C-A6BD-81206DE09D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D108856C-D619-417C-A6BD-81206DE09D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D108856C-D619-417C-A6BD-81206DE09D60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,5 +66,7 @@ Global
 		{4DD4647E-D2A3-46B6-B8DD-A1449AF63D95} = {A7CE9CEA-63EF-40BC-9DDD-F57D7AC26C3E}
 		{603B4008-58E4-47DD-B771-A4E7E2686DD9} = {F94FF3B1-9AED-4908-B76D-570530B58737}
 		{354BC29B-B4C1-43A1-A2E4-DF67ACB06E8C} = {F94FF3B1-9AED-4908-B76D-570530B58737}
+		{07CA7F10-49B0-410C-BE7E-CED17F276DCC} = {4DD4647E-D2A3-46B6-B8DD-A1449AF63D95}
+		{D108856C-D619-417C-A6BD-81206DE09D60} = {4DD4647E-D2A3-46B6-B8DD-A1449AF63D95}
 	EndGlobalSection
 EndGlobal
