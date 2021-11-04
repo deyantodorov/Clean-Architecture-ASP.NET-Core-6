@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Mail\" />
+    <None Remove="Microsoft.Extensions.Options.ConfigurationExtensions" />
+    <None Remove="SendGrid" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mail\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\HR.LeaveManagement.Application\HR.LeaveManagement.Application.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="5.0.0" />
+    <PackageReference Include="SendGrid" Version="9.24.4" />
+  </ItemGroup>
+</Project>
