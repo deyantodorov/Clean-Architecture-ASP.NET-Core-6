@@ -46,14 +46,16 @@
     <None Remove="DTOs\LeaveAllocation\Validators\" />
     <None Remove="Exceptions\" />
     <None Remove="Responses\" />
+    <None Remove="Contracts\Infrastructure\" />
+    <None Remove="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Persistance\" />
+    <Folder Include="Contracts\" />
     <Folder Include="Profiles\" />
     <Folder Include="DTOs\" />
     <Folder Include="DTOs\Common\" />
     <Folder Include="DTOs\LeaveRequest\" />
-    <Folder Include="Persistance\Contracts\" />
+    <Folder Include="Contracts\Persistance\" />
     <Folder Include="Features\" />
     <Folder Include="Features\LeaveTypes\" />
     <Folder Include="Features\LeaveRequests\" />
@@ -83,6 +85,8 @@
     <Folder Include="DTOs\LeaveAllocation\Validators\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Responses\" />
+    <Folder Include="Contracts\Infrastructure\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />

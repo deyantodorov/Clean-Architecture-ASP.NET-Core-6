@@ -6,7 +6,7 @@ using AutoMapper;
 
 using HR.LeaveManagement.Application.DTOs.LeaveType;
 using HR.LeaveManagement.Application.Features.LeaveTypes.Requests.Queries;
-using HR.LeaveManagement.Application.Persistance.Contracts;
+using HR.LeaveManagement.Application_;
 
 using MediatR;
 
@@ -14,19 +14,19 @@ namespace HR.LeaveManagement.Application.Features.LeaveTypes.Handlers.Queries
 {
     public class GetLeaveTypeListRequestHandler : IRequestHandler<GetLeaveTypeListRequest, List<LeaveTypeDto>>
     {
-        private readonly ILeaveTypeRepository leaveTypeRepository;
-        private readonly IMapper mapper;
+        private readonly ILeaveTypeRepository _leaveTypeRepository;
+        private readonly IMapper _mapper;
 
         public GetLeaveTypeListRequestHandler(ILeaveTypeRepository leaveTypeRepository, IMapper mapper)
         {
-            this.leaveTypeRepository = leaveTypeRepository;
-            this.mapper = mapper;
+            _leaveTypeRepository = leaveTypeRepository;
+            _mapper = mapper;
         }
 
         public async Task<List<LeaveTypeDto>> Handle(GetLeaveTypeListRequest request, CancellationToken cancellationToken)
         {
-            var leaveTypes = await this.leaveTypeRepository.GetAll();
-            return this.mapper.Map<List<LeaveTypeDto>>(leaveTypes);
+            var leaveTypes = await _leaveTypeRepository.GetAll();
+            return _mapper.Map<List<LeaveTypeDto>>(leaveTypes);
         }
     }
 }
