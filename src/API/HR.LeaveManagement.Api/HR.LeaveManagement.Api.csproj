@@ -20,6 +20,8 @@
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
     <None Remove="Swashbuckle.AspNetCore.Swagger" />
     <None Remove="Swashbuckle.AspNetCore.SwaggerUI" />
+    <None Remove="MediatR" />
+    <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.2.3" />
@@ -29,5 +31,7 @@
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.2.3" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.2.3" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 </Project>

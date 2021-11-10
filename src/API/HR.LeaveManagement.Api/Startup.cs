@@ -53,6 +53,12 @@ namespace HR.LeaveManagement.Api
                 app.UseDeveloperExceptionPage();
             }
 
+            if (env.IsDevelopment() || env.IsEnvironment("Testing"))
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "HR.LeaveManagement.Api v1"));
+            }
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
