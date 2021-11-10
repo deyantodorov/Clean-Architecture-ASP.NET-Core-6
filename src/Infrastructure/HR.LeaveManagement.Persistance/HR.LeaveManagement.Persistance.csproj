@@ -11,12 +11,14 @@
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="Microsoft.Extensions.Options.ConfigurationExtensions" />
     <None Remove="Repositories\" />
+    <None Remove="Configurations\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.11" />
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repositories\" />
+    <Folder Include="Configurations\" />
   </ItemGroup>
 </Project>

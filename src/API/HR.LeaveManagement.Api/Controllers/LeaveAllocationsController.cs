@@ -1,8 +1,12 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+
+using HR.LeaveManagement.Application.DTOs.LeaveAllocation;
+using HR.LeaveManagement.Application.Features.LeaveAllocations.Requests.Commands;
+using HR.LeaveManagement.Application.Features.LeaveAllocations.Requests.Queries;
+
+using MediatR;
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace HR.LeaveManagement.Api.Controllers
@@ -11,36 +15,49 @@ namespace HR.LeaveManagement.Api.Controllers
     [ApiController]
     public class LeaveAllocationsController : ControllerBase
     {
-        // GET: api/LeaveAllocations
+        private readonly IMediator _mediator;
+
+        public LeaveAllocationsController(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
+
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<ActionResult<List<LeaveAllocationDto>>> Get()
         {
-            return new string[] { "value1", "value2" };
+            var leaveAllocations = await _mediator.Send(new GetLeaveAllocationListRequest());
+            return Ok(leaveAllocations);
         }
 
-        // GET: api/LeaveAllocations/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public async Task<ActionResult<LeaveAllocationDto>> Get(int id)
         {
-            return "value";
+            var leaveAllocation = await _mediator.Send(new GetLeaveAllocationDetailRequest { Id = id });
+            return Ok(leaveAllocation);
         }
 
-        // POST: api/LeaveAllocations
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<ActionResult> Post([FromBody] CreateLeaveAllocationDto leaveAllocation)
         {
+            var command = new CreateLeaveAllocationCommand { LeaveAllocationDto = leaveAllocation };
+            var response = await _mediator.Send(command);
+            return Ok(response);
         }
 
-        // PUT: api/LeaveAllocations/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut]
+        public async Task<ActionResult> Put([FromBody] UpdateLeaveAllocationDto leaveAllocation)
         {
+            var command = new UpdateLeaveAllocationCommand { LeaveAllocationDto = leaveAllocation };
+            _ = await _mediator.Send(command);
+            return NoContent();
         }
 
-        // DELETE: api/LeaveAllocations/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
+            var command = new DeleteLeaveAllocationCommand { Id = id };
+            _ = await _mediator.Send(command);
+            return NoContent();
         }
     }
 }
