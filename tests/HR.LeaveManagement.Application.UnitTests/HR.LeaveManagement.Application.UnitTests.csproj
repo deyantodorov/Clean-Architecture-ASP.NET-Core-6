@@ -20,6 +20,8 @@
     </PackageReference>
     <PackageReference Include="Moq" Version="4.16.1" />
     <PackageReference Include="Shouldly" Version="4.0.3" />
+    <PackageReference Include="AutoFixture.AutoMoq" Version="4.17.0" />
+    <PackageReference Include="AutoFixture" Version="4.17.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,9 +29,18 @@
     <None Remove="LeaveTypes\" />
     <None Remove="Shouldly" />
     <None Remove="Mocks\" />
+    <None Remove="AutoFixture.AutoMoq" />
+    <None Remove="AutoFixture" />
+    <None Remove="LeaveTypes\Commands\" />
+    <None Remove="LeaveTypes\Queries\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="LeaveTypes\" />
     <Folder Include="Mocks\" />
+    <Folder Include="LeaveTypes\Commands\" />
+    <Folder Include="LeaveTypes\Queries\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Core\HR.LeaveManagement.Application\HR.LeaveManagement.Application.csproj" />
   </ItemGroup>
 </Project>
