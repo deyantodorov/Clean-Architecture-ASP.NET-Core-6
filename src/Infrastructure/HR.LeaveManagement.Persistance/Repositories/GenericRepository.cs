@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-using HR.LeaveManagement.Application_;
+using HR.LeaveManagement.Application;
 
 using Microsoft.EntityFrameworkCore;
 

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace HR.LeaveManagement.Application_
+namespace HR.LeaveManagement.Application
 {
     public interface IGenericRepository<T> where T : class
     {

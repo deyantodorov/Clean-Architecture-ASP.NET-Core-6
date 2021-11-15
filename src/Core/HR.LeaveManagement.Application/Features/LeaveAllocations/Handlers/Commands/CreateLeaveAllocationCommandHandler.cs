@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 
 using HR.LeaveManagement.Application.Features.LeaveAllocations.Requests.Commands;
-using HR.LeaveManagement.Application_;
+using HR.LeaveManagement.Application;
 using HR.LeaveManagement.Domain;
 
 using MediatR;

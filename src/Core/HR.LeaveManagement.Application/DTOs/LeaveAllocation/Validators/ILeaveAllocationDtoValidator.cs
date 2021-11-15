@@ -2,7 +2,7 @@
 
 using FluentValidation;
 
-using HR.LeaveManagement.Application_;
+using HR.LeaveManagement.Application;
 
 namespace HR.LeaveManagement.Application.DTOs.LeaveAllocation.Validators
 {

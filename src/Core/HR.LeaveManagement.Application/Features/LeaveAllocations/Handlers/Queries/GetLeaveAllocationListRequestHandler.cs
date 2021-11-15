@@ -6,7 +6,7 @@ using AutoMapper;
 
 using HR.LeaveManagement.Application.DTOs.LeaveAllocation;
 using HR.LeaveManagement.Application.Features.LeaveAllocations.Requests.Queries;
-using HR.LeaveManagement.Application_;
+using HR.LeaveManagement.Application;
 
 using MediatR;
 

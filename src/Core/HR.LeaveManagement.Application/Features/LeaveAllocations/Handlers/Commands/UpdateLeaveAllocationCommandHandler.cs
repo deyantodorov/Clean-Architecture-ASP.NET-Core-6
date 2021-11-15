@@ -7,7 +7,7 @@ using FluentValidation;
 
 using HR.LeaveManagement.Application.DTOs.LeaveAllocation.Validators;
 using HR.LeaveManagement.Application.Features.LeaveAllocations.Requests.Commands;
-using HR.LeaveManagement.Application_;
+using HR.LeaveManagement.Application;
 
 using MediatR;
 

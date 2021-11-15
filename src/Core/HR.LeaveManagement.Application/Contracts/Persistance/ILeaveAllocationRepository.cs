@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 using HR.LeaveManagement.Domain;
 
-namespace HR.LeaveManagement.Application_
+namespace HR.LeaveManagement.Application
 {
     public interface ILeaveAllocationRepository : IGenericRepository<LeaveAllocation>
     {

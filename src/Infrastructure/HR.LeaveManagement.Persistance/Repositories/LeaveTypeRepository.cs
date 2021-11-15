@@ -1,4 +1,4 @@
-﻿using HR.LeaveManagement.Application_;
+﻿using HR.LeaveManagement.Application;
 using HR.LeaveManagement.Domain;
 
 namespace HR.LeaveManagement.Persistance.Repositories

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-using HR.LeaveManagement.Application_;
+using HR.LeaveManagement.Application;
 using HR.LeaveManagement.Domain;
 
 using Moq;
