@@ -8,6 +8,7 @@ using HR.LeaveManagement.Application.Exceptions;
 using HR.LeaveManagement.Application.Features.LeaveTypes.Handlers.Commands;
 using HR.LeaveManagement.Application.Features.LeaveTypes.Requests.Commands;
 using HR.LeaveManagement.Application.Profiles;
+using HR.LeaveManagement.Application.Responses;
 using HR.LeaveManagement.Application.UnitTests.Mocks;
 
 using Moq;
@@ -51,7 +52,7 @@ namespace HR.LeaveManagement.Application.UnitTests.LeaveTypes.Commands
 
             var leaveTypes = await _mockRepo.Object.GetAll();
 
-            result.ShouldBeOfType<int>();
+            result.ShouldBeOfType<BaseCommandResponse>();
             leaveTypes.Count.ShouldBe(3);
         }
 
@@ -62,16 +63,12 @@ namespace HR.LeaveManagement.Application.UnitTests.LeaveTypes.Commands
 
             _createLeaveTypeDto.DefaultDays = -1;
 
-            ValidationException validationException = await Should.ThrowAsync<ValidationException>(async () =>
-            {
-                await handler.Handle(new CreateLeaveTypeCommand { CreateLeaveTypeDto = _createLeaveTypeDto }, CancellationToken.None);
-            });
-
+            var result = await handler.Handle(new CreateLeaveTypeCommand { CreateLeaveTypeDto = _createLeaveTypeDto }, CancellationToken.None);
 
             var leaveTypes = await _mockRepo.Object.GetAll();
 
             leaveTypes.Count.ShouldBe(2);
-            _ = validationException.ShouldNotBeNull();
+            result.ShouldBeOfType<BaseCommandResponse>();
         }
     }
 }
