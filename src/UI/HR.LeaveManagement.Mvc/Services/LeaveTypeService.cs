@@ -9,17 +9,36 @@ namespace HR.LeaveManagement.Mvc.Services
     public class LeaveTypeService : BaseHttpService, ILeaveTypeService
     {
         private readonly IMapper _mapper;
-        private readonly IClient _client;
-        private readonly ILocalStorageService _localStorage;
 
         public LeaveTypeService(IMapper mapper, IClient client, ILocalStorageService localStorage)
             : base(localStorage, client)
         {
             _mapper = mapper;
-            _client = client;
-            _localStorage = localStorage;
         }
 
-       
+        public Task<Response<int>> CreateLeaveType(CreateLeaveTypeVM createLeaveType)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<LeaveTypeVM> CreateLeaveTypeDetails(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Response<int>> DeleteLeaveType(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<LeaveTypeVM>> GetLeaveTypes()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Response<int>> UpdateLeaveType(int id, LeaveTypeVM leaveType)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
