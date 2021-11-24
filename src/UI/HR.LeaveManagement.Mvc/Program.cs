@@ -10,8 +10,8 @@ builder.Services.AddHttpClient<IClient, Client>(cl => cl.BaseAddress = new Uri("
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
-builder.Services.AddScoped<ILeaveAllocationService, LeaveAllocationService>();
-builder.Services.AddScoped<ILeaveRequestService, LeaveRequestService>();
+//builder.Services.AddScoped<ILeaveAllocationService, LeaveAllocationService>();
+//builder.Services.AddScoped<ILeaveRequestService, LeaveRequestService>();
 builder.Services.AddScoped<ILeaveTypeService, LeaveTypeService>();
 
 builder.Services.AddSingleton<ILocalStorageService, LocalStorageService>();
