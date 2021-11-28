@@ -1,11 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using HR.LeaveManagement.Mvc.Contracts;
 
-using HR.LeaveManagement.Mvc.Contracts;
-
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HR.LeaveManagement.Mvc.Controllers
@@ -20,19 +14,20 @@ namespace HR.LeaveManagement.Mvc.Controllers
         }
 
         // GET: LeaveTypes
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View();
+            var model = await _leaveTypeService.GetLeaveTypes();
+            return View(model);
         }
 
         // GET: LeaveTypes/Details/5
-        public ActionResult Details(int id)
+        public async Task<ActionResult> Details(int id)
         {
             return View();
         }
 
         // GET: LeaveTypes/Create
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
             return View();
         }
@@ -40,7 +35,7 @@ namespace HR.LeaveManagement.Mvc.Controllers
         // POST: LeaveTypes/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(IFormCollection collection)
         {
             try
             {
@@ -55,7 +50,7 @@ namespace HR.LeaveManagement.Mvc.Controllers
         }
 
         // GET: LeaveTypes/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
             return View();
         }
@@ -63,7 +58,7 @@ namespace HR.LeaveManagement.Mvc.Controllers
         // POST: LeaveTypes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(int id, IFormCollection collection)
         {
             try
             {
@@ -78,7 +73,7 @@ namespace HR.LeaveManagement.Mvc.Controllers
         }
 
         // GET: LeaveTypes/Delete/5
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
             return View();
         }
@@ -86,7 +81,7 @@ namespace HR.LeaveManagement.Mvc.Controllers
         // POST: LeaveTypes/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id, IFormCollection collection)
         {
             try
             {
