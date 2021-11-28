@@ -1,4 +1,7 @@
-﻿using HR.LeaveManagement.Mvc.Models;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+
+using HR.LeaveManagement.Mvc.Models;
 using HR.LeaveManagement.Mvc.Services.Base;
 
 namespace HR.LeaveManagement.Mvc.Contracts
