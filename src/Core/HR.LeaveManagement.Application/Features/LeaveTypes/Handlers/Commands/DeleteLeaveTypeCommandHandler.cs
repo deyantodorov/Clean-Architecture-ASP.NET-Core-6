@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 
 using HR.LeaveManagement.Application.Exceptions;
 using HR.LeaveManagement.Application.Features.LeaveTypes.Requests.Commands;
-using HR.LeaveManagement.Application;
 using HR.LeaveManagement.Domain;
 
 using MediatR;

@@ -14,7 +14,9 @@ namespace HR.LeaveManagement.Persistance
             services
                 .AddDbContext<HrLeaveManagementDbContext>(options =>
                 {
-                    options.UseSqlServer(configuration.GetConnectionString("HrLeaveManagementConnectionString"));
+                    options.UseSqlServer(
+                        configuration.GetConnectionString("HrLeaveManagementConnectionString"),
+                        b => b.MigrationsAssembly(typeof(HrLeaveManagementDbContext).Assembly.FullName));
                 });
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));

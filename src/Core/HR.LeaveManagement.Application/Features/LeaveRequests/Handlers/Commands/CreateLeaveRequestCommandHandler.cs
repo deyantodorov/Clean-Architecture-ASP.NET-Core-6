@@ -8,9 +8,8 @@ using AutoMapper;
 using HR.LeaveManagement.Application.Contracts.Infrastructure;
 using HR.LeaveManagement.Application.DTOs.LeaveRequest.Validators;
 using HR.LeaveManagement.Application.Features.LeaveRequests.Requests.Commands;
-using HR.LeaveManagement.Application.Models;
+using HR.LeaveManagement.Application.Models.Email;
 using HR.LeaveManagement.Application.Responses;
-using HR.LeaveManagement.Application;
 using HR.LeaveManagement.Domain;
 
 using MediatR;

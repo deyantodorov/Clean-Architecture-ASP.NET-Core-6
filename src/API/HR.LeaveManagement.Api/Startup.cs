@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 
 using HR.LeaveManagement.Application;
+using HR.LeaveManagement.Identity;
 using HR.LeaveManagement.Infrastructure;
 using HR.LeaveManagement.Persistance;
 
@@ -29,6 +30,7 @@ namespace HR.LeaveManagement.Api
             services.ConfigureApplicationServices();
             services.ConfigureInfrastructureService(Configuration);
             services.ConfigurePersistanceService(Configuration);
+            services.ConfigureIdentityServices(Configuration);
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

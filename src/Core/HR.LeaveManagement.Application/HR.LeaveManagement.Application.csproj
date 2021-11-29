@@ -51,7 +51,6 @@
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Contracts\" />
     <Folder Include="Profiles\" />
     <Folder Include="DTOs\" />
     <Folder Include="DTOs\Common\" />
@@ -87,7 +86,6 @@
     <Folder Include="Exceptions\" />
     <Folder Include="Responses\" />
     <Folder Include="Contracts\Infrastructure\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
@@ -97,5 +95,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.810.11
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A7CE9CEA-63EF-40BC-9DDD-F57D7AC26C3E}"
 EndProject
@@ -15,9 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{37E79829-4E86-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{4DD4647E-D2A3-46B6-B8DD-A1449AF63D95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Domain", "src\Core\HR.LeaveManagement.Domain\HR.LeaveManagement.Domain.csproj", "{603B4008-58E4-47DD-B771-A4E7E2686DD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.LeaveManagement.Domain", "src\Core\HR.LeaveManagement.Domain\HR.LeaveManagement.Domain.csproj", "{603B4008-58E4-47DD-B771-A4E7E2686DD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Application", "src\Core\HR.LeaveManagement.Application\HR.LeaveManagement.Application.csproj", "{354BC29B-B4C1-43A1-A2E4-DF67ACB06E8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.LeaveManagement.Application", "src\Core\HR.LeaveManagement.Application\HR.LeaveManagement.Application.csproj", "{354BC29B-B4C1-43A1-A2E4-DF67ACB06E8C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4E60C058-0978-4994-94CB-82E57333B45F}"
 	ProjectSection(SolutionItems) = preProject
@@ -26,15 +26,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Infrastructure", "src\Infrastructure\HR.LeaveManagement.Infrastructure\HR.LeaveManagement.Infrastructure.csproj", "{07CA7F10-49B0-410C-BE7E-CED17F276DCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.LeaveManagement.Infrastructure", "src\Infrastructure\HR.LeaveManagement.Infrastructure\HR.LeaveManagement.Infrastructure.csproj", "{07CA7F10-49B0-410C-BE7E-CED17F276DCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Persistance", "src\Infrastructure\HR.LeaveManagement.Persistance\HR.LeaveManagement.Persistance.csproj", "{D108856C-D619-417C-A6BD-81206DE09D60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.LeaveManagement.Persistance", "src\Infrastructure\HR.LeaveManagement.Persistance\HR.LeaveManagement.Persistance.csproj", "{D108856C-D619-417C-A6BD-81206DE09D60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Api", "src\API\HR.LeaveManagement.Api\HR.LeaveManagement.Api.csproj", "{059B674B-CADA-4BE2-9065-BF7FF4CD271B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.LeaveManagement.Api", "src\API\HR.LeaveManagement.Api\HR.LeaveManagement.Api.csproj", "{059B674B-CADA-4BE2-9065-BF7FF4CD271B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Application.UnitTests", "tests\HR.LeaveManagement.Application.UnitTests\HR.LeaveManagement.Application.UnitTests.csproj", "{1847A367-75E2-4817-94A2-EA487487C008}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.LeaveManagement.Application.UnitTests", "tests\HR.LeaveManagement.Application.UnitTests\HR.LeaveManagement.Application.UnitTests.csproj", "{1847A367-75E2-4817-94A2-EA487487C008}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Mvc", "src\UI\HR.LeaveManagement.Mvc\HR.LeaveManagement.Mvc.csproj", "{B7B89DF0-20FF-4195-8EE8-6F58AF1A9426}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.LeaveManagement.Mvc", "src\UI\HR.LeaveManagement.Mvc\HR.LeaveManagement.Mvc.csproj", "{B7B89DF0-20FF-4195-8EE8-6F58AF1A9426}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Identity", "src\Infrastructure\HR.LeaveManagement.Identity\HR.LeaveManagement.Identity.csproj", "{B7783FDC-BC9A-41D1-BF21-488CE5050138}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -70,12 +72,13 @@ Global
 		{B7B89DF0-20FF-4195-8EE8-6F58AF1A9426}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7B89DF0-20FF-4195-8EE8-6F58AF1A9426}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7B89DF0-20FF-4195-8EE8-6F58AF1A9426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7783FDC-BC9A-41D1-BF21-488CE5050138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7783FDC-BC9A-41D1-BF21-488CE5050138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7783FDC-BC9A-41D1-BF21-488CE5050138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7783FDC-BC9A-41D1-BF21-488CE5050138}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {710FBB3C-B708-4D54-A310-2048B7E0BF43}
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A9A8B64B-D5A9-4A1F-AAD6-FE2E6CD5299B} = {A7CE9CEA-63EF-40BC-9DDD-F57D7AC26C3E}
@@ -89,5 +92,9 @@ Global
 		{059B674B-CADA-4BE2-9065-BF7FF4CD271B} = {A9A8B64B-D5A9-4A1F-AAD6-FE2E6CD5299B}
 		{1847A367-75E2-4817-94A2-EA487487C008} = {8B0FDB9C-FE4C-496F-8F54-04F15394E262}
 		{B7B89DF0-20FF-4195-8EE8-6F58AF1A9426} = {37E79829-4E86-4FF5-B758-554D9B0A4D1F}
+		{B7783FDC-BC9A-41D1-BF21-488CE5050138} = {4DD4647E-D2A3-46B6-B8DD-A1449AF63D95}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {710FBB3C-B708-4D54-A310-2048B7E0BF43}
 	EndGlobalSection
 EndGlobal

@@ -1,5 +1,5 @@
 ﻿using HR.LeaveManagement.Application.Contracts.Infrastructure;
-using HR.LeaveManagement.Application.Models;
+using HR.LeaveManagement.Application.Models.Email;
 using HR.LeaveManagement.Infrastructure.Mail;
 
 using Microsoft.Extensions.Configuration;

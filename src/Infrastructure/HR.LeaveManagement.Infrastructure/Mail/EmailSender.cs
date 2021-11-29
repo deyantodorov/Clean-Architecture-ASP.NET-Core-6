@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 
 using HR.LeaveManagement.Application.Contracts.Infrastructure;
-using HR.LeaveManagement.Application.Models;
+using HR.LeaveManagement.Application.Models.Email;
 
 using Microsoft.Extensions.Options;
 
