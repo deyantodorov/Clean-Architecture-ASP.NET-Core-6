@@ -27,7 +27,7 @@ namespace HR.LeaveManagement.Identity.Configurations
                 },
                 new ApplicationUser
                 {
-                    Id = "fb9c1b70-4f42-41e8-ba21-75b6069be846",
+                    Id = "7e8f9c00-f190-4dad-8dd8-2568857e1279",
                     Email = "user@localhost.com",
                     NormalizedEmail = "USER@LOCALHOST.COM",
                     FirstName = "System",

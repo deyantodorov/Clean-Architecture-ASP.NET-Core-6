@@ -17,7 +17,7 @@ namespace HR.LeaveManagement.Identity.Configurations
                 },
                 new IdentityRole
                 {
-                    Id = "726d32ec-9934-4d0f-a67c-6a925226dfdc",
+                    Id = "3d889a94-b98f-4920-a666-29bb3949bec6",
                     Name = "Administrator",
                     NormalizedName = "ADMINISTRATOR"
                 });
