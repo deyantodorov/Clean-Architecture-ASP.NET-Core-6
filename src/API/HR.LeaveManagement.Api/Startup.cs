@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Collections.Generic;
+using System.Reflection;
 
 using HR.LeaveManagement.Application;
 using HR.LeaveManagement.Identity;
@@ -10,6 +11,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 
 namespace HR.LeaveManagement.Api
 {
@@ -32,11 +34,9 @@ namespace HR.LeaveManagement.Api
             services.ConfigurePersistanceService(Configuration);
             services.ConfigureIdentityServices(Configuration);
 
+            AddSwaggerDoc(services);
+
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = $"{Assembly.GetExecutingAssembly().FullName}", Version = "v1" });
-            });
 
             services.AddCors(o =>
             {
@@ -55,6 +55,8 @@ namespace HR.LeaveManagement.Api
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseAuthentication();
+
             if (env.IsDevelopment() || env.IsEnvironment("Testing"))
             {
                 app.UseSwagger();
@@ -72,6 +74,47 @@ namespace HR.LeaveManagement.Api
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+        }
+
+        private void AddSwaggerDoc(IServiceCollection services)
+        {
+            services.AddSwaggerGen(c =>
+            {
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Description = @"JWT Authorization header using Bearer scheme. 'Bearer' [space] and then your token in the text. Example: 'Bearer 12345abcdef'",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer"
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.Schema,
+                                Id = "Bearer"
+                            },
+                            Scheme = "oauth2",
+                            Name = "Bearer",
+                            In = ParameterLocation.Header
+                        },
+                        new List<string>()
+                    }
+                });
+
+                c.SwaggerDoc(
+                    "v1", 
+                    new OpenApiInfo
+                    {
+                        Version = "v1",
+                        Title = $"{Assembly.GetExecutingAssembly().FullName}"
+                    });
             });
         }
     }
