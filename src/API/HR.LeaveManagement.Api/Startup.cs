@@ -97,7 +97,7 @@ namespace HR.LeaveManagement.Api
                         {
                             Reference = new OpenApiReference
                             {
-                                Type = ReferenceType.Schema,
+                                Type = ReferenceType.SecurityScheme,
                                 Id = "Bearer"
                             },
                             Scheme = "oauth2",

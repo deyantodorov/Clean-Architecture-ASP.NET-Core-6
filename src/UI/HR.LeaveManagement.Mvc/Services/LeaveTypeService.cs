@@ -79,7 +79,7 @@ namespace HR.LeaveManagement.Mvc.Services
             try
             {
                 var leaveTypeDto = _mapper.Map<LeaveTypeDto>(leaveType);
-                await _client.LeaveTypesPUTAsync(leaveTypeDto);
+                await _client.LeaveTypesPUTAsync("0", leaveTypeDto); // TODO: resolve this id
                 return new Response<int>() { Success = true };
             }
             catch (ApiException ex)
