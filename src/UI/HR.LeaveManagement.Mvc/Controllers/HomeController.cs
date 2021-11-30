@@ -1,6 +1,9 @@
 ﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
+
 using HR.LeaveManagement.Mvc.Models;
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace HR.LeaveManagement.Mvc.Controllers;
 

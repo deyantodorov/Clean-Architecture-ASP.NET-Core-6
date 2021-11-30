@@ -1,4 +1,7 @@
-﻿using HR.LeaveManagement.Mvc.Contracts;
+﻿using System;
+using System.Threading.Tasks;
+
+using HR.LeaveManagement.Mvc.Contracts;
 using HR.LeaveManagement.Mvc.Models;
 
 using Microsoft.AspNetCore.Mvc;
