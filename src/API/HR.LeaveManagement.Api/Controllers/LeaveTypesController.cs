@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 using HR.LeaveManagement.Application.DTOs.LeaveType;
@@ -15,7 +15,7 @@ namespace HR.LeaveManagement.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [Authorize(Roles = "Administrator")]
     public class LeaveTypesController : ControllerBase
     {
         private readonly IMediator _mediator;
