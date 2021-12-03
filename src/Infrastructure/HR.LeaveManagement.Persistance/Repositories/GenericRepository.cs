@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-using HR.LeaveManagement.Application;
+using HR.LeaveManagement.Application.Contracts.Persistence;
 
 using Microsoft.EntityFrameworkCore;
 
-namespace HR.LeaveManagement.Persistance.Repositories
+namespace HR.LeaveManagement.Persistence.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {

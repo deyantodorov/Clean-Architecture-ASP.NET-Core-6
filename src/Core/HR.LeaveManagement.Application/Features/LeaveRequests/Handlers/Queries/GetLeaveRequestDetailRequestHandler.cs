@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 
 using AutoMapper;
 
+using HR.LeaveManagement.Application.Contracts.Persistence;
 using HR.LeaveManagement.Application.DTOs.LeaveRequest;
 using HR.LeaveManagement.Application.Features.LeaveRequests.Requests.Queries;
-using HR.LeaveManagement.Application;
 
 using MediatR;
 

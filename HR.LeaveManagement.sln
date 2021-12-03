@@ -28,7 +28,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.LeaveManagement.Infrastructure", "src\Infrastructure\HR.LeaveManagement.Infrastructure\HR.LeaveManagement.Infrastructure.csproj", "{07CA7F10-49B0-410C-BE7E-CED17F276DCC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.LeaveManagement.Persistance", "src\Infrastructure\HR.LeaveManagement.Persistance\HR.LeaveManagement.Persistance.csproj", "{D108856C-D619-417C-A6BD-81206DE09D60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.LeaveManagement.Persistence", "src\Infrastructure\HR.LeaveManagement.Persistance\HR.LeaveManagement.Persistence.csproj", "{D108856C-D619-417C-A6BD-81206DE09D60}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.LeaveManagement.Api", "src\API\HR.LeaveManagement.Api\HR.LeaveManagement.Api.csproj", "{059B674B-CADA-4BE2-9065-BF7FF4CD271B}"
 EndProject
@@ -36,7 +36,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.LeaveManagement.Applicat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.LeaveManagement.Mvc", "src\UI\HR.LeaveManagement.Mvc\HR.LeaveManagement.Mvc.csproj", "{B7B89DF0-20FF-4195-8EE8-6F58AF1A9426}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.LeaveManagement.Identity", "src\Infrastructure\HR.LeaveManagement.Identity\HR.LeaveManagement.Identity.csproj", "{B7783FDC-BC9A-41D1-BF21-488CE5050138}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.LeaveManagement.Identity", "src\Infrastructure\HR.LeaveManagement.Identity\HR.LeaveManagement.Identity.csproj", "{B7783FDC-BC9A-41D1-BF21-488CE5050138}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

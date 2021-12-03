@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace HR.LeaveManagement.Persistance.Migrations
+namespace HR.LeaveManagement.Persistence.Migrations
 {
     public partial class AddEmployeeIdToLeaveAllocation : Migration
     {

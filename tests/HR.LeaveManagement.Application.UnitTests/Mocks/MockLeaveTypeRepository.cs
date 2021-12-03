@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-using HR.LeaveManagement.Application;
+using HR.LeaveManagement.Application.Contracts.Persistence;
 using HR.LeaveManagement.Domain;
 
 using Moq;

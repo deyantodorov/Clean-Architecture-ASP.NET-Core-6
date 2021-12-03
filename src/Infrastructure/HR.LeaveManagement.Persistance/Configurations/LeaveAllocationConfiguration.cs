@@ -3,7 +3,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace HR.LeaveManagement.Persistance.Configurations
+namespace HR.LeaveManagement.Persistence.Configurations
 {
     public class LeaveAllocationConfiguration : IEntityTypeConfiguration<LeaveAllocation>
     {

@@ -56,7 +56,7 @@
     <Folder Include="DTOs\" />
     <Folder Include="DTOs\Common\" />
     <Folder Include="DTOs\LeaveRequest\" />
-    <Folder Include="Contracts\Persistance\" />
+    <Folder Include="Contracts\Persistence\" />
     <Folder Include="Features\" />
     <Folder Include="Features\LeaveTypes\" />
     <Folder Include="Features\LeaveRequests\" />

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace HR.LeaveManagement.Persistance.Migrations
+namespace HR.LeaveManagement.Persistence.Migrations
 {
     public partial class SeedingLeaveTypes : Migration
     {

@@ -7,7 +7,7 @@ using HR.LeaveManagement.Domain.Common;
 
 using Microsoft.EntityFrameworkCore;
 
-namespace HR.LeaveManagement.Persistance
+namespace HR.LeaveManagement.Persistence
 {
     public class HrLeaveManagementDbContext : DbContext
     {

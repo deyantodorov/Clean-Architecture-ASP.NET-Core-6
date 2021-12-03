@@ -1,15 +1,15 @@
-﻿using HR.LeaveManagement.Application;
-using HR.LeaveManagement.Persistance.Repositories;
+﻿using HR.LeaveManagement.Application.Contracts.Persistence;
+using HR.LeaveManagement.Persistence.Repositories;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace HR.LeaveManagement.Persistance
+namespace HR.LeaveManagement.Persistence
 {
-    public static class PersistanceServiceRegistration
+    public static class PersistenceServiceRegistration
     {
-        public static IServiceCollection ConfigurePersistanceService(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection ConfigurePersistenceService(this IServiceCollection services, IConfiguration configuration)
         {
             services
                 .AddDbContext<HrLeaveManagementDbContext>(options =>

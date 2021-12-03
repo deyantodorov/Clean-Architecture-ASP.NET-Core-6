@@ -4,7 +4,7 @@ using System.Reflection;
 using HR.LeaveManagement.Application;
 using HR.LeaveManagement.Identity;
 using HR.LeaveManagement.Infrastructure;
-using HR.LeaveManagement.Persistance;
+using HR.LeaveManagement.Persistence;
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,7 +31,7 @@ namespace HR.LeaveManagement.Api
         {
             services.ConfigureApplicationServices();
             services.ConfigureInfrastructureService(Configuration);
-            services.ConfigurePersistanceService(Configuration);
+            services.ConfigurePersistenceService(Configuration);
             services.ConfigureIdentityServices(Configuration);
 
             AddSwaggerDoc(services);

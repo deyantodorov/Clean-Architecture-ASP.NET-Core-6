@@ -13,7 +13,7 @@
     <ProjectReference Include="..\..\Infrastructure\HR.LeaveManagement.Infrastructure\HR.LeaveManagement.Infrastructure.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="..\..\Infrastructure\HR.LeaveManagement.Persistance\HR.LeaveManagement.Persistance.csproj">
+    <ProjectReference Include="..\..\Infrastructure\HR.LeaveManagement.Persistance\HR.LeaveManagement.Persistence.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
