@@ -36,14 +36,15 @@ namespace HR.LeaveManagement.Persistence.Repositories
             return leaveAllocation;
         }
 
-        public Task<bool> AllocationExists(string userId, int leaveTypeId, int period)
+        public async Task<bool> AllocationExists(string userId, int leaveTypeId, int period)
         {
-            throw new System.NotImplementedException();
+            return await _dbcontext.LeaveAllocations.AnyAsync(x => x.EmployeeId == userId && x.LeaveTypeId == leaveTypeId && x.Period == period);
         }
 
-        public Task AddAllocation(List<LeaveAllocation> allocations)
+        public async Task AddAllocations(IEnumerable<LeaveAllocation> allocations)
         {
-            throw new System.NotImplementedException();
+            await _dbcontext.AddRangeAsync(allocations);
+            await _dbcontext.SaveChangesAsync();
         }
     }
 }

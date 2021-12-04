@@ -85,7 +85,7 @@ namespace HR.LeaveManagement.Mvc.Services
             {
                 var leaveTypeDto = _mapper.Map<LeaveTypeDto>(leaveType);
                 AddBearerToken();
-                await _client.LeaveTypesPUTAsync("0", leaveTypeDto); // TODO: resolve this id
+                await _client.LeaveTypesPUTAsync(leaveTypeDto); // TODO: resolve this id
                 return new Response<int>() { Success = true };
             }
             catch (ApiException ex)

@@ -13,6 +13,6 @@ namespace HR.LeaveManagement.Application.Contracts.Persistence
 
         Task<bool> AllocationExists(string userId, int leaveTypeId, int period);
 
-        Task AddAllocation(List<LeaveAllocation> allocations);
+        Task AddAllocations(IEnumerable<LeaveAllocation> allocations);
     }
 }
