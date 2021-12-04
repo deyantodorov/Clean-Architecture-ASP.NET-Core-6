@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 
-using HR.LeaveManagement.Mvc.Models;
+using HR.LeaveManagement.Mvc.Models.LeaveType;
+using HR.LeaveManagement.Mvc.Models.User;
 using HR.LeaveManagement.Mvc.Services.Base;
 
 namespace HR.LeaveManagement.Mvc
@@ -9,9 +10,9 @@ namespace HR.LeaveManagement.Mvc
     {
         public MappingProfile()
         {
-            CreateMap<CreateLeaveTypeDto, CreateLeaveTypeVM>().ReverseMap();
-            CreateMap<LeaveTypeDto, LeaveTypeVM>().ReverseMap();
-            CreateMap<RegisterVM, RegistrationRequest>().ReverseMap();
+            CreateMap<CreateLeaveTypeDto, CreateLeaveTypeVm>().ReverseMap();
+            CreateMap<LeaveTypeDto, LeaveTypeVm>().ReverseMap();
+            CreateMap<RegisterVm, RegistrationRequest>().ReverseMap();
         }
     }
 }

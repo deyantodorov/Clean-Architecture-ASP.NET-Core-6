@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 
 using HR.LeaveManagement.Mvc.Contracts;
-using HR.LeaveManagement.Mvc.Models;
+using HR.LeaveManagement.Mvc.Models.User;
 
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,7 +23,7 @@ namespace HR.LeaveManagement.Mvc.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(LoginVM login, string? returnUrl)
+        public async Task<IActionResult> Login(LoginVm login, string? returnUrl)
         {
             if (ModelState.IsValid)
             {
@@ -45,7 +45,7 @@ namespace HR.LeaveManagement.Mvc.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(RegisterVM registration)
+        public async Task<IActionResult> Register(RegisterVm registration)
         {
             if (ModelState.IsValid)
             {

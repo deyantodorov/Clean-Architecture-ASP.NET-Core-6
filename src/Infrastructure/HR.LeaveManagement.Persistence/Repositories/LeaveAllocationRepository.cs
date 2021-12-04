@@ -18,7 +18,7 @@ namespace HR.LeaveManagement.Persistence.Repositories
             _dbcontext = dbContext;
         }
 
-        public async Task<List<LeaveAllocation>> GetLeaveAllocationsWithDetails()
+        public async Task<List<LeaveAllocation?>> GetLeaveAllocationsWithDetails()
         {
             var leaveAllocations = await _dbcontext.LeaveAllocations
                 .Include(x => x.LeaveType)
@@ -27,7 +27,7 @@ namespace HR.LeaveManagement.Persistence.Repositories
             return leaveAllocations;
         }
 
-        public async Task<LeaveAllocation> GetLeaveAllocationWithDetails(int id)
+        public async Task<LeaveAllocation?> GetLeaveAllocationWithDetails(int id)
         {
             var leaveAllocation = await _dbcontext.LeaveAllocations
                 .Include(x => x.LeaveType)
@@ -45,6 +45,13 @@ namespace HR.LeaveManagement.Persistence.Repositories
         {
             await _dbcontext.AddRangeAsync(allocations);
             await _dbcontext.SaveChangesAsync();
+        }
+
+        public async Task<LeaveAllocation?> GetUserAllocations(string userId, int leaveTypeId)
+        {
+            return await _dbcontext
+                .LeaveAllocations
+                .FirstOrDefaultAsync(x => x.EmployeeId == userId && x.LeaveTypeId == leaveTypeId);
         }
     }
 }

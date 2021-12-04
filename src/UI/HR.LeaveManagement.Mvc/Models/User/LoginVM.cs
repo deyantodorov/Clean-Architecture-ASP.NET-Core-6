@@ -1,9 +1,9 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
 
-namespace HR.LeaveManagement.Mvc.Models
+namespace HR.LeaveManagement.Mvc.Models.User
 {
-    public class LoginVM
+    public class LoginVm
     {
         [Required]
         [EmailAddress]

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-using HR.LeaveManagement.Mvc.Models;
+using HR.LeaveManagement.Mvc.Models.User;
 
 namespace HR.LeaveManagement.Mvc.Contracts
 {
@@ -8,7 +8,7 @@ namespace HR.LeaveManagement.Mvc.Contracts
     {
         Task<bool> Authenticate(string email, string password);
 
-        Task<bool> Register(RegisterVM register);
+        Task<bool> Register(RegisterVm register);
 
         Task Logout();
     }

@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 
 using HR.LeaveManagement.Mvc.Contracts;
-using HR.LeaveManagement.Mvc.Models;
+using HR.LeaveManagement.Mvc.Models.LeaveType;
 
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -44,7 +44,7 @@ namespace HR.LeaveManagement.Mvc.Controllers
         // POST: LeaveTypes/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(CreateLeaveTypeVM leaveType)
+        public async Task<ActionResult> Create(CreateLeaveTypeVm leaveType)
         {
             try
             {
@@ -74,7 +74,7 @@ namespace HR.LeaveManagement.Mvc.Controllers
         // POST: LeaveTypes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(int id, LeaveTypeVM leaveType)
+        public async Task<ActionResult> Edit(int id, LeaveTypeVm leaveType)
         {
             try
             {

@@ -1,9 +1,8 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace HR.LeaveManagement.Mvc.Models
+namespace HR.LeaveManagement.Mvc.Models.LeaveType
 {
-    public class CreateLeaveTypeVM
+    public class CreateLeaveTypeVm
     {
         [Required]
         public string Name { get; set; }

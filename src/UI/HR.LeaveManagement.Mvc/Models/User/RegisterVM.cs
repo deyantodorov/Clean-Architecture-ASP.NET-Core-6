@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace HR.LeaveManagement.Mvc.Models
+namespace HR.LeaveManagement.Mvc.Models.User
 {
-    public class RegisterVM
+    public class RegisterVm
     {
         [Required]
         public string FirstName { get; set; }

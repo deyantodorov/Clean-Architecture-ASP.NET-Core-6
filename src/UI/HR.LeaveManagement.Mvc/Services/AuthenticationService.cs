@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 
 using HR.LeaveManagement.Mvc.Contracts;
-using HR.LeaveManagement.Mvc.Models;
+using HR.LeaveManagement.Mvc.Models.User;
 using HR.LeaveManagement.Mvc.Services.Base;
 
 using Microsoft.AspNetCore.Authentication;
@@ -69,7 +69,7 @@ namespace HR.LeaveManagement.Mvc.Services
             }
         }
 
-        public async Task<bool> Register(RegisterVM register)
+        public async Task<bool> Register(RegisterVm register)
         {
             var registrationRequest = _mapper.Map<RegistrationRequest>(register);
 

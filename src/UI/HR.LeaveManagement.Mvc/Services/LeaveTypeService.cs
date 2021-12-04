@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 
 using HR.LeaveManagement.Mvc.Contracts;
-using HR.LeaveManagement.Mvc.Models;
+using HR.LeaveManagement.Mvc.Models.LeaveType;
 using HR.LeaveManagement.Mvc.Services.Base;
 
 namespace HR.LeaveManagement.Mvc.Services
@@ -20,7 +20,7 @@ namespace HR.LeaveManagement.Mvc.Services
             _mapper = mapper;
         }
 
-        public async Task<Response<int>> CreateLeaveType(CreateLeaveTypeVM createLeaveType)
+        public async Task<Response<int>> CreateLeaveType(CreateLeaveTypeVm createLeaveType)
         {
             try
             {
@@ -65,21 +65,21 @@ namespace HR.LeaveManagement.Mvc.Services
             }
         }
 
-        public async Task<LeaveTypeVM> GetLeaveTypeDetails(int id)
+        public async Task<LeaveTypeVm> GetLeaveTypeDetails(int id)
         {
             AddBearerToken();
             var leaveType = await _client.LeaveTypesGETAsync(id);
-            return _mapper.Map<LeaveTypeVM>(leaveType);
+            return _mapper.Map<LeaveTypeVm>(leaveType);
         }
 
-        public async Task<List<LeaveTypeVM>> GetLeaveTypes()
+        public async Task<List<LeaveTypeVm>> GetLeaveTypes()
         {
             AddBearerToken();
             var leaveTypes = await _client.LeaveTypesAllAsync();
-            return _mapper.Map<List<LeaveTypeVM>>(leaveTypes);
+            return _mapper.Map<List<LeaveTypeVm>>(leaveTypes);
         }
 
-        public async Task<Response<int>> UpdateLeaveType(int id, LeaveTypeVM leaveType)
+        public async Task<Response<int>> UpdateLeaveType(int id, LeaveTypeVm leaveType)
         {
             try
             {
