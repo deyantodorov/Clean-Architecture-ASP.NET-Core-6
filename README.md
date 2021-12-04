@@ -20,5 +20,3 @@ add migration 'HrLeaveManagement':
 ```powershell
 dotnet ef migrations add name --project .\src\Infrastructure\HR.LeaveManagement.Persistence\HR.LeaveManagement.Persistence.csproj --startup-project .\src\API\HR.LeaveManagement.Api\HR.LeaveManagement.Api.csproj --context HrLeaveManagementDbContext
 ```
-
-dotnet ef migrations add LeaveRequestAddEmployee --project .\src\Infrastructure\HR.LeaveManagement.Persistence\HR.LeaveManagement.Persistence.csproj --startup-project .\src\API\HR.LeaveManagement.Api\HR.LeaveManagement.Api.csproj --context HrLeaveManagementDbContext
