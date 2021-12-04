@@ -13,10 +13,12 @@ dotnet ef database update --project .\src\Infrastructure\HR.LeaveManagement.Iden
 
 Update database 'HrLeaveManagement':
 ```powershell
-dotnet ef database update --project .\src\Infrastructure\HR.LeaveManagement.Persistance\HR.LeaveManagement.Persistance.csproj --startup-project .\src\API\HR.LeaveManagement.Api\HR.LeaveManagement.Api.csproj --context HrLeaveManagementDbContext
+dotnet ef database update --project .\src\Infrastructure\HR.LeaveManagement.Persistence\HR.LeaveManagement.Persistence.csproj --startup-project .\src\API\HR.LeaveManagement.Api\HR.LeaveManagement.Api.csproj --context HrLeaveManagementDbContext
 ```
 
-Update add migration 'HrLeaveManagement':
+add migration 'HrLeaveManagement':
 ```powershell
-dotnet ef migrations add name --project .\src\Infrastructure\HR.LeaveManagement.Persistance\HR.LeaveManagement.Persistance.csproj --startup-project .\src\API\HR.LeaveManagement.Api\HR.LeaveManagement.Api.csproj --context HrLeaveManagementDbContext
+dotnet ef migrations add name --project .\src\Infrastructure\HR.LeaveManagement.Persistence\HR.LeaveManagement.Persistence.csproj --startup-project .\src\API\HR.LeaveManagement.Api\HR.LeaveManagement.Api.csproj --context HrLeaveManagementDbContext
 ```
+
+dotnet ef migrations add LeaveRequestAddEmployee --project .\src\Infrastructure\HR.LeaveManagement.Persistence\HR.LeaveManagement.Persistence.csproj --startup-project .\src\API\HR.LeaveManagement.Api\HR.LeaveManagement.Api.csproj --context HrLeaveManagementDbContext

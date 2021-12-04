@@ -13,9 +13,7 @@
     <ProjectReference Include="..\..\Infrastructure\HR.LeaveManagement.Infrastructure\HR.LeaveManagement.Infrastructure.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="..\..\Infrastructure\HR.LeaveManagement.Persistance\HR.LeaveManagement.Persistence.csproj">
-      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\HR.LeaveManagement.Persistence\HR.LeaveManagement.Persistence.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Swashbuckle.AspNetCore.SwaggerGen" />
