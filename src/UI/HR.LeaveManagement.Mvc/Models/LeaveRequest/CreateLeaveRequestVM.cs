@@ -15,10 +15,11 @@ namespace HR.LeaveManagement.Mvc.Models.LeaveRequest
         [Required]
         public DateTime EndDate { get; set; }
 
-        public SelectList LeaveTypes { get; set; }
+        public SelectList? LeaveTypes { get; set; }
 
         [Display(Name = "Leave Type")]
         [Required]
+        [Range(1, int.MaxValue)]
         public int LeaveTypeId { get; set; }
 
         [Display(Name = "Comments")]

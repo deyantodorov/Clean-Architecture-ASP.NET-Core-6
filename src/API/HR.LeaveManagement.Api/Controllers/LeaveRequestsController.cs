@@ -1,9 +1,10 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 using HR.LeaveManagement.Application.DTOs.LeaveRequest;
 using HR.LeaveManagement.Application.Features.LeaveRequests.Requests.Commands;
 using HR.LeaveManagement.Application.Features.LeaveRequests.Requests.Queries;
+using HR.LeaveManagement.Application.Responses;
 
 using MediatR;
 
@@ -25,9 +26,9 @@ namespace HR.LeaveManagement.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<LeaveRequestListDto>>> Get()
+        public async Task<ActionResult<List<LeaveRequestListDto>>> Get(bool isLoggedInUser = false)
         {
-            var leaveRequests = await _mediator.Send(new GetLeaveRequestListRequest());
+            var leaveRequests = await _mediator.Send(new GetLeaveRequestListRequest() { IsLoggedInUser = isLoggedInUser });
             return Ok(leaveRequests);
         }
 
@@ -39,7 +40,7 @@ namespace HR.LeaveManagement.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] CreateLeaveRequestDto leaveRequest)
+        public async Task<ActionResult<BaseCommandResponse>> Post([FromBody] CreateLeaveRequestDto leaveRequest)
         {
             var command = new CreateLeaveRequestCommand { LeaveRequestDto = leaveRequest };
             var response = await _mediator.Send(command);

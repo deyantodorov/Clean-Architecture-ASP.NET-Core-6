@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using HR.LeaveManagement.Application.Contracts.Persistence;
@@ -18,22 +19,32 @@ namespace HR.LeaveManagement.Persistence.Repositories
             _dbcontext = dbContext;
         }
 
-        public async Task<List<LeaveAllocation?>> GetLeaveAllocationsWithDetails()
-        {
-            var leaveAllocations = await _dbcontext.LeaveAllocations
-                .Include(x => x.LeaveType)
-                .ToListAsync();
-
-            return leaveAllocations;
-        }
-
-        public async Task<LeaveAllocation?> GetLeaveAllocationWithDetails(int id)
+        public async Task<LeaveAllocation> GetLeaveAllocationWithDetails(int id)
         {
             var leaveAllocation = await _dbcontext.LeaveAllocations
                 .Include(x => x.LeaveType)
-                .FirstOrDefaultAsync(x => x.Id == id);
+                .FirstAsync(x => x.Id == id);
 
             return leaveAllocation;
+        }
+
+        public async Task<List<LeaveAllocation>> GetLeaveAllocationsWithDetails()
+        {
+            var leaveAllocation = await _dbcontext.LeaveAllocations
+                .Include(x => x.LeaveType)
+                .ToListAsync();
+
+            return leaveAllocation;
+        }
+
+        public async Task<List<LeaveAllocation>> GetLeaveAllocationsWithDetails(string userId)
+        {
+            var leaveAllocations = await _dbcontext.LeaveAllocations
+                .Include(x => x.LeaveType)
+                .Where(x => x.EmployeeId == userId)
+                .ToListAsync();
+
+            return leaveAllocations;
         }
 
         public async Task<bool> AllocationExists(string userId, int leaveTypeId, int period)

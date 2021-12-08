@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using HR.LeaveManagement.Application.Contracts.Persistence;
@@ -18,11 +19,25 @@ namespace HR.LeaveManagement.Persistence.Repositories
             _dbcontext = dbContext;
         }
 
+        public async Task<List<LeaveRequest>> GetLeaveRequestsWithDetails(string userId)
+        {
+            return await _dbcontext.LeaveRequests.Where(x => x.RequestingEmployeeId == userId).ToListAsync();
+        }
+
         public async Task ChangeApprovalStatus(LeaveRequest leaveRequest, bool? approvalStatus)
         {
             leaveRequest.Approved = approvalStatus;
             _dbcontext.Entry(leaveRequest).State = EntityState.Modified;
             await _dbcontext.SaveChangesAsync();
+        }
+
+        public async Task<LeaveRequest> GetLeaveRequestWithDetails(int id)
+        {
+            var leaveRequest = await _dbcontext.LeaveRequests
+                .Include(x => x.LeaveType)
+                .FirstAsync(x => x.Id == id);
+
+            return leaveRequest;
         }
 
         public async Task<List<LeaveRequest>> GetLeaveRequestsWithDetails()
@@ -32,15 +47,6 @@ namespace HR.LeaveManagement.Persistence.Repositories
                 .ToListAsync();
 
             return leaveRequests;
-        }
-
-        public async Task<LeaveRequest> GetLeaveRequestWithDetails(int id)
-        {
-            var leaveRequest = await _dbcontext.LeaveRequests
-                .Include(x => x.LeaveType)
-                .FirstOrDefaultAsync(x => x.Id == id);
-
-            return leaveRequest;
         }
     }
 }
