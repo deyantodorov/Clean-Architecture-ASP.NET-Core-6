@@ -36,7 +36,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="LeaveTypes\" />
-    <Folder Include="Mocks\" />
     <Folder Include="LeaveTypes\Commands\" />
     <Folder Include="LeaveTypes\Queries\" />
   </ItemGroup>

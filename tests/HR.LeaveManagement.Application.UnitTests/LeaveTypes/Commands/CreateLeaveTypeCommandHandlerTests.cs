@@ -22,12 +22,12 @@ namespace HR.LeaveManagement.Application.UnitTests.LeaveTypes.Commands
     public class CreateLeaveTypeCommandHandlerTests
     {
         private readonly IMapper _mapper;
-        private readonly Mock<ILeaveTypeRepository> _mockRepo;
+        private readonly Mock<IUnitOfWork> _unitOfWork;
         private readonly CreateLeaveTypeDto _createLeaveTypeDto;
 
         public CreateLeaveTypeCommandHandlerTests()
         {
-            _mockRepo = MockLeaveTypeRepository.GetLeaveTypeRepository();
+            _unitOfWork = MockUnitOfWork.GetUnitOfWork();
 
             var mapperConfig = new MapperConfiguration(c =>
             {
@@ -46,11 +46,11 @@ namespace HR.LeaveManagement.Application.UnitTests.LeaveTypes.Commands
         [Fact]
         public async Task Valid_LeaveType_Add()
         {
-            var handler = new CreateLeaveTypeCommandHandler(_mockRepo.Object, _mapper);
+            var handler = new CreateLeaveTypeCommandHandler(_unitOfWork.Object.LeaveTypeRepository, _mapper);
 
             var result = await handler.Handle(new CreateLeaveTypeCommand { CreateLeaveTypeDto = _createLeaveTypeDto}, CancellationToken.None);
 
-            var leaveTypes = await _mockRepo.Object.GetAll();
+            var leaveTypes = await _unitOfWork.Object.LeaveTypeRepository.GetAll();
 
             result.ShouldBeOfType<BaseCommandResponse>();
             leaveTypes.Count.ShouldBe(3);
@@ -59,13 +59,13 @@ namespace HR.LeaveManagement.Application.UnitTests.LeaveTypes.Commands
         [Fact]
         public async Task InValid_LeaveType_Add()
         {
-            var handler = new CreateLeaveTypeCommandHandler(_mockRepo.Object, _mapper);
+            var handler = new CreateLeaveTypeCommandHandler(_unitOfWork.Object.LeaveTypeRepository, _mapper);
 
             _createLeaveTypeDto.DefaultDays = -1;
 
             var result = await handler.Handle(new CreateLeaveTypeCommand { CreateLeaveTypeDto = _createLeaveTypeDto }, CancellationToken.None);
 
-            var leaveTypes = await _mockRepo.Object.GetAll();
+            var leaveTypes = await _unitOfWork.Object.LeaveTypeRepository.GetAll();
 
             leaveTypes.Count.ShouldBe(2);
             result.ShouldBeOfType<BaseCommandResponse>();
