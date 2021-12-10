@@ -55,7 +55,6 @@ namespace HR.LeaveManagement.Persistence.Repositories
         public async Task AddAllocations(IEnumerable<LeaveAllocation> allocations)
         {
             await _dbcontext.AddRangeAsync(allocations);
-            await _dbcontext.SaveChangesAsync();
         }
 
         public async Task<LeaveAllocation?> GetUserAllocations(string userId, int leaveTypeId)
