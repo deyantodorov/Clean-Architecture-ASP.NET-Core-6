@@ -33,7 +33,7 @@
                                     <a class="nav-link text-dark" asp-area="" asp-controller="LeaveRequests" asp-action="Create">Request Leave</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="LeaveRequests" asp-action="MyLeave">My Leave</a>
+                                    @*<a class="nav-link text-dark" asp-area="" asp-controller="LeaveRequests" asp-action="MyLeave">My Leave</a>*@
                                 </li>
                             }
                             if (User.IsInRole("Administrator"))
@@ -42,7 +42,7 @@
                                     <a class="nav-link text-dark" asp-controller="LeaveTypes" asp-action="Index">Leave Types</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-controller="LeaveAllocations" asp-action="Index">Leave Types</a>
+                                    @*<a class="nav-link text-dark" asp-controller="LeaveAllocations" asp-action="Index">Leave Types</a>*@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-controller="LeaveRequests" asp-action="Index">Leave Requests</a>

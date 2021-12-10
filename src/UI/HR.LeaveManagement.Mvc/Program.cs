@@ -2,6 +2,7 @@
 using System.Reflection;
 
 using HR.LeaveManagement.Mvc.Contracts;
+using HR.LeaveManagement.Mvc.Middleware;
 using HR.LeaveManagement.Mvc.Services;
 using HR.LeaveManagement.Mvc.Services.Base;
 
@@ -44,6 +45,8 @@ else
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
+
+app.UseMiddleware<RequestMiddleware>();
 
 app.UseCookiePolicy();
 app.UseAuthentication();
