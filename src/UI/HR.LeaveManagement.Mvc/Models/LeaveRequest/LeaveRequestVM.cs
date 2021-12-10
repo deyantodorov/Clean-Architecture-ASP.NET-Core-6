@@ -20,7 +20,9 @@ namespace HR.LeaveManagement.Mvc.Models.LeaveRequest
         public bool? Approved { get; set; }
 
         public bool Cancelled { get; set; }
+
         public LeaveTypeVm LeaveType { get; set; }
+        
         public EmployeeVm Employee { get; set; }
     }
 }

@@ -53,10 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Profiles\" />
-    <Folder Include="DTOs\" />
     <Folder Include="DTOs\Common\" />
-    <Folder Include="DTOs\LeaveRequest\" />
-    <Folder Include="Contracts\Persistence\" />
     <Folder Include="Features\" />
     <Folder Include="Features\LeaveTypes\" />
     <Folder Include="Features\LeaveRequests\" />
@@ -82,7 +79,6 @@
     <Folder Include="DTOs\LeaveAllocation\" />
     <Folder Include="DTOs\LeaveType\" />
     <Folder Include="DTOs\LeaveType\Validators\" />
-    <Folder Include="DTOs\LeaveRequest\Validators\" />
     <Folder Include="DTOs\LeaveAllocation\Validators\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Responses\" />

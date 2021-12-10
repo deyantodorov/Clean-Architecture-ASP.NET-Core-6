@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using AutoMapper;
@@ -13,15 +15,31 @@ namespace HR.LeaveManagement.Mvc.Services
     {
         private readonly IMapper _mapper;
 
-        public LeaveRequestService(ILocalStorageService localStorage, IClient client, IMapper mapper)
+        public LeaveRequestService(
+            ILocalStorageService localStorage,
+            IClient client,
+            IMapper mapper)
             : base(localStorage, client)
         {
             _mapper = mapper;
         }
 
-        public Task<AdminLeaveRequestViewVm> GetAdminLeaveRequestList()
+        public async Task<AdminLeaveRequestViewVm> GetAdminLeaveRequestList()
         {
-            throw new System.NotImplementedException();
+            AddBearerToken();
+
+            var leaveRequests = await _client.LeaveRequestsAllAsync(isLoggedInUser: false);
+
+            var model = new AdminLeaveRequestViewVm()
+            {
+                TotalRequests = leaveRequests.Count,
+                ApprovedRequests = leaveRequests.Count(x => x.Approve == true),
+                PendingRequests = leaveRequests.Count(x => x.Approve == null),
+                RejectedRequests = leaveRequests.Count(x => x.Approve == false),
+                LeaveRequests = _mapper.Map<List<LeaveRequestVm>>(leaveRequests),
+            };
+
+            return model;
         }
 
         public Task<EmployeeLeaveRequestViewVm> GetEmployeeLeaveRequest()
@@ -70,14 +88,26 @@ namespace HR.LeaveManagement.Mvc.Services
             throw new NotImplementedException();
         }
 
-        public Task<LeaveRequestVm> GetLeaveRequest(int id)
+        public async Task<LeaveRequestVm> GetLeaveRequest(int id)
         {
-            throw new NotImplementedException();
+            AddBearerToken();
+            var leaveRequest = await _client.LeaveRequestsGETAsync(id);
+            return _mapper.Map<LeaveRequestVm>(leaveRequest);
         }
 
-        public Task ApproveLeaveRequest(int id, bool approved)
+        public async Task ApproveLeaveRequest(int id, bool approved)
         {
-            throw new NotImplementedException();
+            AddBearerToken();
+
+            try
+            {
+                var request = new ChangeLeaveRequestApprovalDto { Approved = approved, Id = id };
+                await _client.ChangeapprovalAsync(id, request);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
